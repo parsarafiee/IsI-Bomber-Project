@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Player : MonoBehaviour
+
+public class InputToV2EventSy : MonoBehaviour
 {
+    public UnityEvent<Vector2> dirPressed;
+    public KeyCode up = KeyCode.W;
+    public KeyCode down = KeyCode.S;
+    public KeyCode right = KeyCode.D;
+    public KeyCode left = KeyCode.A;
 
-    public Rigidbody2D rb;
-    public float speed;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,23 +27,25 @@ public class Player : MonoBehaviour
     void ReadKeyboard()
     {
         Vector2 velo = new Vector2(0, 0);
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(left))
         {
+            Debug.Log("aol");
             velo.x = -1;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(right))
         {
             velo.x = 1;
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(up))
         {
             velo.y = 1;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(down))
         {
             velo.y = -1;
         }
-        rb.velocity = velo;
+
+        dirPressed.Invoke(velo);
 
     }
 }
