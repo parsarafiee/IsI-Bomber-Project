@@ -5876,8 +5876,8 @@ Tilemap:
   - first: {x: -1, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -6155,15 +6155,15 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 594
+  - m_RefCount: 593
     m_Data: {fileID: 11400000, guid: 8b715a7a18383494b94711eb6f2a6756, type: 2}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 6cb8b523e863e8044a0e44f36ad0bdc8, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 594
+  - m_RefCount: 593
     m_Data: {fileID: -4570138490422884784, guid: bef5f6225c0350849b257018f0381bc0, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 7904480389642116908, guid: bef5f6225c0350849b257018f0381bc0, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 594
     m_Data:
@@ -8860,7 +8860,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 5, z: -10}
+  m_LocalPosition: {x: -0.49999905, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8961,7 +8961,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7784257, y: 1}
+    m_SensorSize: {x: 1.7784255, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -13866,7 +13866,9 @@ GameObject:
   - component: {fileID: 1377130252}
   - component: {fileID: 1377130254}
   - component: {fileID: 1377130255}
+  - component: {fileID: 1377130258}
   - component: {fileID: 1377130256}
+  - component: {fileID: 1377130257}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -13992,6 +13994,48 @@ MonoBehaviour:
   down: 115
   right: 100
   left: 97
+--- !u!114 &1377130257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377130250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e44b02a86a0adcb45a25d28a29829321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropTheBomb:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1377130258}
+        m_TargetAssemblyTypeName: Initializer, Assembly-CSharp
+        m_MethodName: InitializeTheObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dropBombKey: 32
+  numberOfBombsAvalable: 2
+--- !u!114 &1377130258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377130250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b634567a7a99727458e1fe271ed6dec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInsntantiate: {fileID: 6970342897042151104, guid: 36e96be0ffe5ce445bc074a688bdbbd6, type: 3}
 --- !u!1 &1598717989
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,6 @@ public class InputToV2EventSy : MonoBehaviour
         Vector2 velo = new Vector2(0, 0);
         if (Input.GetKey(left))
         {
-            Debug.Log("aol");
             velo.x = -1;
         }
         if (Input.GetKey(right))
