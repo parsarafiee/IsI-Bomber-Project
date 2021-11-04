@@ -5,9 +5,8 @@ using UnityEngine;
 public class DreamCamera : MonoBehaviour
 {
     // Start is called before the first frame update
-
-    public Transform background;
-    public Transform player;
+    public Transform camera;
+    public float parallax;
     void Start()
     {
         
@@ -16,8 +15,7 @@ public class DreamCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = player.transform.position +new Vector3(0, 0, -1);
-        background.transform.position = this.transform.position / 3;
+        transform.position = camera.transform.position / parallax;
 
 
     }
