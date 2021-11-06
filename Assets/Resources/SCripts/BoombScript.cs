@@ -10,10 +10,11 @@ public class BoombScript : MonoBehaviour
     public float explosionRadius =1;
     public GameObject explosionSprite;
     public float bombExplosionSpriteTimeAlive = 3;
+    public 
 
 
     bool bombExploaded;
-    float timer=0;
+   // float timer=0;
     void Start()
     {
         
@@ -30,14 +31,14 @@ public class BoombScript : MonoBehaviour
 
 
         // make raycast to see if its collide with anything to destroy +
-        RaycastHit2D[] hitObjectArrayRight = Physics2D.RaycastAll(this.transform.position+new Vector3(-explosionRadius,0,0), Vector2.right, explosionRadius*2);
-        RaycastHit2D[] hitObjectArrayDown = Physics2D.RaycastAll(this.transform.position + new Vector3(0, +explosionRadius, 0), Vector2.down, explosionRadius*2);
-        hitObjectArrayRight = hitObjectArrayRight.Concat(hitObjectArrayDown).ToArray();
-        for (int i = 0; i < hitObjectArrayRight.Length; i++)
-        {
-            var v = hitObjectArrayRight[i];
-            Debug.Log(hitObjectArrayRight[i].collider.name);
-        }
+        //Collider2D[] hitObjectArrayRight = Physics2D.OverlapBoxAll(this.transform.position, Vector2.right,0);
+        //Collider2D[] hitObjectArrayDown = Physics2D.OverlapBoxAll(this.transform.position, 0), Vector2.down,0);
+        //hitObjectArrayRight = hitObjectArrayRight.Concat(hitObjectArrayDown).ToArray();
+        //for (int i = 0; i < hitObjectArrayRight.Length; i++)
+        //{
+        //    var v = hitObjectArrayRight[i];
+        //    Debug.Log(hitObjectArrayRight[i].collider.name);
+        //}
 
         GameObject.Destroy(gameObject);
     }
