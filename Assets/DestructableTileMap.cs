@@ -18,12 +18,20 @@ public class DestructableTileMap : MonoBehaviour
     {
         Vector3Int position1 = grid.WorldToCell(pos);
         Debug.Log(position1);
-        int[] a;
-        int[] b;
+        List<Vector2> a = new List<Vector2>() ;
+        List<Vector2> b = new List<Vector2>() ;
+        
+        
         for (int i = -range; i < range; i++)
         {
-            
+            a.Add(new Vector2( i, 0));
+            b.Add(new Vector2(0, i));
+        }
+        a.AddRange(b);
 
+        for (int i = 0; i < a.Count; i++)
+        {
+            tilemap.SetTile(position1 + new Vector3Int((int)a[i].x, (int)a[i].y ,0), null);
         }
         //for (int x = -range; x < range; x++)
         //{
@@ -40,7 +48,7 @@ public class DestructableTileMap : MonoBehaviour
         //            b = 0;
         //        }
         //        Debug.Log(new Vector2(a,b));
-        //       // tilemap.SetTile(position1+new Vector3Int(a,b,0), null);
+        //        
 
         //    }
         //}

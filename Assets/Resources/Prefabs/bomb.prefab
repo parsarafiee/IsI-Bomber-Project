@@ -172,7 +172,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeToExplode: 5
+  timeToExplode: 1
 --- !u!114 &1684185920257609352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,4 +185,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce411448da79c864ca29d24b4436bcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRange: 2
+  explosionRange: 50
