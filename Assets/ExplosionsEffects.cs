@@ -6,7 +6,9 @@ using UnityEngine.Tilemaps;
 public class ExplosionsEffects : MonoBehaviour
 {
     public int explosionRange;
+    public LayerMask layermask;
 
+    bool exploaded;
     DestructableTileMap dt;
 
     // Start is called before the first frame update
@@ -17,7 +19,12 @@ public class ExplosionsEffects : MonoBehaviour
 
     public void ExplodeTileMap()
     {
+        exploaded = true;
         dt.DestroyTileMap(explosionRange, gameObject.transform.position);
+    }
+    public void DestroyObjects()       
+    {
+
     }
 
 
@@ -26,6 +33,10 @@ public class ExplosionsEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (exploaded)
+        {
+            DestroyObjects();
+        }
         
     }
 }

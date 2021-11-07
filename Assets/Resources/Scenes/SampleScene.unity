@@ -8905,7 +8905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 5, z: -10}
+  m_LocalPosition: {x: -0.49999905, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9006,7 +9006,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.582725, y: 1}
+    m_SensorSize: {x: 2.5839417, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14067,31 +14067,16 @@ MonoBehaviour:
       - m_Target: {fileID: 1377130258}
         m_TargetAssemblyTypeName: Initializer, Assembly-CSharp
         m_MethodName: InitializeTheObject
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2113646755}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1377130258}
-        m_TargetAssemblyTypeName: Initializer, Assembly-CSharp
-        m_MethodName: InitializeTheObject
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 522151111}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  rightPos: {fileID: 2113646755}
-  leftPos: {fileID: 522151111}
-  right: 120
-  left: 122
+  dropBomb: 32
   numberOfBombsAvalable: 2
 --- !u!114 &1377130258
 MonoBehaviour:
