@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7078477666545188274}
   - component: {fileID: 8619511824377117875}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bomb Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,9 +95,11 @@ GameObject:
   - component: {fileID: 340011741868588319}
   - component: {fileID: 2119963891634670146}
   - component: {fileID: 1684185920257609352}
-  m_Layer: 0
+  - component: {fileID: 6813315504048337051}
+  - component: {fileID: 3844902585485577607}
+  m_Layer: 11
   m_Name: bomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,7 +173,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeToExplode: 3
+  timeToExplode: 2
 --- !u!114 &1684185920257609352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,4 +186,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce411448da79c864ca29d24b4436bcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRange: 50
+  explosionRange: 2
+--- !u!58 &6813315504048337051
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970342897042151104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.097982734, y: -0.031047672}
+  serializedVersion: 2
+  m_Radius: 0.22741988
+--- !u!50 &3844902585485577607
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6970342897042151104}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

@@ -8,6 +8,7 @@ public class DestructableTileMap : MonoBehaviour
 
     public Tilemap tilemap;
     public Grid grid;
+    public Tilemap undestructableTile;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,40 +19,61 @@ public class DestructableTileMap : MonoBehaviour
     {
         Vector3Int position1 = grid.WorldToCell(pos);
         Debug.Log(position1);
-        List<Vector2> a = new List<Vector2>() ;
-        List<Vector2> b = new List<Vector2>() ;
-        
-        
-        for (int i = -range; i < range; i++)
-        {
-            a.Add(new Vector2( i, 0));
-            b.Add(new Vector2(0, i));
-        }
-        a.AddRange(b);
 
-        for (int i = 0; i < a.Count; i++)
+        
+        for (int i =1; i <= range; i++)
         {
-            tilemap.SetTile(position1 + new Vector3Int((int)a[i].x, (int)a[i].y ,0), null);
-        }
-        //for (int x = -range; x < range; x++)
-        //{
-        //    a = x;
-        //    for (int y = -range; y < range; y++)
-        //    {
-        //        b = y;
-        //        if ((y > 0 || y < 0) && x != 0)
-        //        {
-        //            a = 0;
-        //        }
-        //        if ((x > 0 || x < 0) && y != 0)
-        //        {
-        //            b = 0;
-        //        }
-        //        Debug.Log(new Vector2(a,b));
-        //        
+            if (undestructableTile.GetTile(position1 + new Vector3Int(i, 0, 0)))
+            {
+                break;
+            }
+            if (tilemap.GetTile(position1 + new Vector3Int(i,0 , 0)) )
+            {
+                tilemap.SetTile(position1 + new Vector3Int(i,0, 0), null);
+                break;
+            }
+            
 
-        //    }
-        //}
+        }
+
+        for (int i =-1; i >= -range; i--)
+        {
+            if (undestructableTile.GetTile(position1 + new Vector3Int(i, 0, 0)))
+            {
+                break;
+            }
+            if (tilemap.GetTile(position1 + new Vector3Int(i, 0, 0)))
+            {
+                tilemap.SetTile(position1 + new Vector3Int(i,0, 0), null);
+                break;
+            }
+        }
+
+        for (int i = 1; i <= range; i++)
+        {
+            if (undestructableTile.GetTile(position1 + new Vector3Int(0, i, 0)))
+            {
+                break;
+            }
+            if (tilemap.GetTile(position1 + new Vector3Int(0, i, 0)))
+            {
+                tilemap.SetTile(position1 + new Vector3Int(0,i, 0), null);
+                break;
+            }
+        }
+
+        for (int i = -1; i >= -range; i--)
+        {
+            if (undestructableTile.GetTile(position1 + new Vector3Int(0, i, 0)))
+            {
+                break;
+            }
+            if (tilemap.GetTile(position1 + new Vector3Int(0, i, 0)))
+            {
+                tilemap.SetTile(position1 + new Vector3Int(0,i, 0), null);
+                break;
+            }
+        }
 
     }
 

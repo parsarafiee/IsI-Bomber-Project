@@ -9,9 +9,10 @@ public class Initializer : MonoBehaviour
     
 
 
-    public void InitializeTheObject()
+    public void InitializeTheObject(Transform tr)
     {
-        GameObject b = GameObject.Instantiate(objectToInsntantiate, this.transform.position, Quaternion.identity);
+        Debug.Log("ali");
+        GameObject b = GameObject.Instantiate(objectToInsntantiate, tr.position, Quaternion.identity);
         b.tag = "Player";
         
     }

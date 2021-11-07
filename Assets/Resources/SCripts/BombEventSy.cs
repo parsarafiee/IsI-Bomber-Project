@@ -5,11 +5,14 @@ using UnityEngine.Events;
 
 public class BombEventSy : MonoBehaviour
 {
-    public UnityEvent dropTheBomb;
-    public KeyCode dropBombKey = KeyCode.Space;
+    public UnityEvent<Transform> dropTheBomb;
+    public Transform rightPos;
+    public Transform leftPos;
+    public KeyCode right = KeyCode.X;
+    public KeyCode left = KeyCode.Z;
     [HideInInspector]public bool numberOfBombsAvalable;
 
-    void Update()
+    void FixedUpdate()
     {
         ReadKeyboard();
     }
@@ -17,10 +20,11 @@ public class BombEventSy : MonoBehaviour
     public void ReadKeyboard()
     {
 
-        if (numberOfBombsAvalable&&Input.GetKeyDown(dropBombKey))
-        {
-            dropTheBomb.Invoke();
 
-        }
+        if (numberOfBombsAvalable && Input.GetKeyDown(left))
+        {
+            dropTheBomb.Invoke(leftPos);
+
+        }    
     }
 }
