@@ -7,7 +7,7 @@ public class BombEventSy : MonoBehaviour
 {
     public UnityEvent dropTheBomb;
     public KeyCode dropBombKey = KeyCode.Space;
-    public int numberOfBombsAvalable;
+    [HideInInspector]public bool numberOfBombsAvalable;
 
     void Update()
     {
@@ -16,9 +16,11 @@ public class BombEventSy : MonoBehaviour
 
     public void ReadKeyboard()
     {
-        if (numberOfBombsAvalable>0&&Input.GetKeyDown(dropBombKey))
+
+        if (numberOfBombsAvalable&&Input.GetKeyDown(dropBombKey))
         {
             dropTheBomb.Invoke();
+
         }
     }
 }

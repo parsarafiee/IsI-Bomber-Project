@@ -132,7 +132,6 @@ MonoBehaviour:
   explosionRadius: 1
   explosionSprite: {fileID: 2606519547276363776, guid: 900ad6eb53603714f9e6e5831c102083, type: 3}
   bombExplosionSpriteTimeAlive: 3
-  bombExploaded: 0
 --- !u!114 &2119963891634670146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +171,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeToExplode: 1
+  timeToExplode: 3
 --- !u!114 &1684185920257609352
 MonoBehaviour:
   m_ObjectHideFlags: 0

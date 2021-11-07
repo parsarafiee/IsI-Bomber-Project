@@ -16,10 +16,9 @@ public class AnimationMng : MonoBehaviour
     }
     public void AnimationDirection()
     {
-        if (anim != null)
-        {
-            anim.SetFloat("D", numb);
-        }
+
+            anim.SetInteger("D", numb);
+
        
 
     }
@@ -28,5 +27,7 @@ public class AnimationMng : MonoBehaviour
     void Update()
     {
         numb = inputV2.animationNumber;
+
+
     }
 }

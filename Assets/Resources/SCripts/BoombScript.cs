@@ -10,7 +10,6 @@ public class BoombScript : MonoBehaviour
     public float explosionRadius =1;
     public GameObject explosionSprite;
     public float bombExplosionSpriteTimeAlive = 3;
-    public 
 
 
     bool bombExploaded;
@@ -28,18 +27,6 @@ public class BoombScript : MonoBehaviour
 
     public void Expload() {
         GameObject _explosionSprite = GameObject.Instantiate(explosionSprite, transform.position, Quaternion.identity);
-
-
-        // make raycast to see if its collide with anything to destroy +
-        //Collider2D[] hitObjectArrayRight = Physics2D.OverlapBoxAll(this.transform.position, Vector2.right,0);
-        //Collider2D[] hitObjectArrayDown = Physics2D.OverlapBoxAll(this.transform.position, 0), Vector2.down,0);
-        //hitObjectArrayRight = hitObjectArrayRight.Concat(hitObjectArrayDown).ToArray();
-        //for (int i = 0; i < hitObjectArrayRight.Length; i++)
-        //{
-        //    var v = hitObjectArrayRight[i];
-        //    Debug.Log(hitObjectArrayRight[i].collider.name);
-        //}
-
         GameObject.Destroy(gameObject);
     }
 }

@@ -6,11 +6,14 @@ public class Initializer : MonoBehaviour
 {
 
     public GameObject objectToInsntantiate;
+    
 
 
     public void InitializeTheObject()
     {
         GameObject b = GameObject.Instantiate(objectToInsntantiate, this.transform.position, Quaternion.identity);
+        b.tag = "Player";
+        
     }
 
 
