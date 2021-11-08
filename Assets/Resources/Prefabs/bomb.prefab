@@ -185,9 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRange: 2
-  layermask:
-    serializedVersion: 2
-    m_Bits: 3072
+  TagList:
+  - Player
+  - Enemy
+  - Destructable
+  - Indestructable
 --- !u!114 &2119963891634670146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +229,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  timeToExplode: 2
+      - m_Target: {fileID: 1684185920257609352}
+        m_TargetAssemblyTypeName: ExplosionsEffects, Assembly-CSharp
+        m_MethodName: DestroyObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  timeToExplode: 5
 --- !u!114 &3301746384070386549
 MonoBehaviour:
   m_ObjectHideFlags: 0

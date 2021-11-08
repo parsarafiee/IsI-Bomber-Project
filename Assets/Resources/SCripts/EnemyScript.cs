@@ -2,25 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour
 {
     // Start is called before the first frame update
-
-    public float speed;
-    public Rigidbody2D rb;
-
-    public PlayerScript playerScript;
-    
-    public void MoveVlo(Vector2 move)
+    void Start()
     {
-
-            rb.velocity = move * speed;
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
